@@ -9,6 +9,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MotionRoot } from "@/components/MotionRoot";
 import { JsonLd } from "@/components/JsonLd";
+import { Analytics } from "@/components/Analytics";
 // Self-hosted fonts (no request to Google; Latin subsets load by unicode-range; CJK falls back to system fonts, see globals.css)
 import "@fontsource/spectral/300.css";
 import "@fontsource/spectral/300-italic.css";
@@ -45,7 +46,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization", "@id": `${SITE_URL}/#org`, name: SITE_NAME, url: SITE_URL, logo: `${SITE_URL}/icon.svg`,
+        "@type": "Organization", "@id": `${SITE_URL}/#org`, name: SITE_NAME, url: SITE_URL, logo: `${SITE_URL}/icon.png`,
         email: contacts.email,
         address: { "@type": "PostalAddress", streetAddress: contacts.address.street, addressLocality: contacts.address.city, addressCountry: contacts.address.countryCode },
         contactPoint: [{ "@type": "ContactPoint", contactType: "sales", email: contacts.email, telephone: contacts.phones[0], availableLanguage: ["en", "de", "fr", "es", "pt", "zh", "ja", "ko"] }],
@@ -65,6 +66,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <MotionRoot />
         </NextIntlClientProvider>
         <JsonLd data={org} />
+        <Analytics />
       </body>
     </html>
   );

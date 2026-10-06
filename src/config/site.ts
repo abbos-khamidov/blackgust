@@ -7,6 +7,9 @@ import type { Locale } from "@/i18n/routing";
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://blackgust.com";
 export const SITE_NAME = "BlackGust";
 
+/** GA4 measurement ID. Override with NEXT_PUBLIC_GA_ID; set it to an empty string to disable. */
+export const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-NZZXL4G0B6";
+
 export const contacts = {
   email: "hello@blackgust.com",
   whatsapp: "+998939492000", // digits only, used for wa.me
