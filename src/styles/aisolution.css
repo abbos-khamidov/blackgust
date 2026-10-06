@@ -1,0 +1,19 @@
+/* /aisolution — page-specific styles. Every class is prefixed ais-. */
+
+/* ---------- one company, two brands ---------- */
+.ais-tree{margin:0;display:flex;flex-direction:column;align-items:center}
+.ais-root{border:1px solid var(--fg);padding:14px 32px;font-family:var(--f-display);font-size:var(--s-xl);font-weight:300;line-height:1.1;text-align:center}
+.ais-stem{display:block;width:1px;height:28px;background:var(--fg-2)}
+.ais-shared{list-style:none;margin:0;padding:12px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;border:1px dashed var(--fg-2);max-width:100%}
+.ais-shared li{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .6rem;border:1px solid var(--rule);color:var(--fg)}
+.ais-brands{position:relative;width:100%;max-width:820px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,3vw,40px);padding-top:36px}
+.ais-brands::before{content:"";position:absolute;top:0;left:25%;right:25%;height:36px;border:1px solid var(--fg-2);border-bottom:0}
+.ais-brand{border:1px solid var(--rule);padding:clamp(16px,2.4vw,28px);display:flex;flex-direction:column;gap:6px;min-width:0;text-align:center;align-items:center}
+.ais-brand b{font-family:var(--f-display);font-weight:300;font-size:var(--s-lg)}
+.ais-brand span{color:var(--fg-2);font-size:.93rem}
+.ais-brand .ais-terms{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase}
+.ais-hl{border-color:var(--fg);box-shadow:inset 0 2px 0 var(--fg)}
+
+/* ---------- partner panel ---------- */
+.ais-partner{border:1px solid var(--rule);padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.ais-partner p{color:var(--fg-2)}

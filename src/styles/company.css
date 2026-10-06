@@ -1,0 +1,45 @@
+/* /company — page-specific styles (prefix: co-) */
+.co-h2{font-size:var(--s-2xl);line-height:1.05}
+
+/* operating-brain diagram */
+.co-dw{padding:clamp(14px,2vw,28px)}
+.co-brain{font-family:var(--f-body)}
+.co-brain text{fill:var(--bone);font-size:15px}
+.co-ttl text{fill:var(--mute);font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.co-edge path{fill:none;stroke:var(--line-2);stroke-width:1.2}
+.co-edge path.co-hot{stroke:var(--brass);stroke-opacity:.55;stroke-dasharray:4 5}
+.co-box rect{fill:var(--ink-3);stroke:var(--line-2)}
+.co-core>rect{fill:var(--brass-dim);stroke:var(--brass);stroke-opacity:.6}
+.co-core .co-chip{fill:var(--ink-2);stroke:var(--line-2)}
+.co-agent circle{fill:var(--brass)}
+.co-people rect{fill:none;stroke:var(--bone);stroke-opacity:.35}
+.co-gov rect{fill:none;stroke:var(--line-2);stroke-dasharray:6 6}
+.co-gov text{fill:var(--mute);font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+@media (prefers-reduced-motion:no-preference){
+  .co-edge path.co-hot{animation:co-flow 2.4s linear infinite}
+}
+@keyframes co-flow{to{stroke-dashoffset:-18}}
+
+/* regions grid: HQ highlighted */
+.co-regions .co-hq{background:linear-gradient(160deg,var(--brass-dim),transparent 70%);box-shadow:inset 0 2px 0 var(--brass)}
+.co-regions .co-hq .k{color:var(--brass)}
+
+/* vertical timeline */
+.co-tl{list-style:none;margin:0;padding:0;position:relative;display:grid}
+.co-tl::before{content:"";position:absolute;left:clamp(150px,22%,260px);top:8px;bottom:8px;width:1px;background:var(--rule)}
+.co-tl li{display:grid;grid-template-columns:clamp(150px,22%,260px) minmax(0,1fr);gap:clamp(24px,4vw,56px);padding:22px 0;position:relative}
+.co-tl li::after{content:"";position:absolute;left:calc(clamp(150px,22%,260px) - 4px);top:30px;width:9px;height:9px;background:var(--fg)}
+.co-tl li:last-child::after{background:transparent;border:1.5px solid var(--fg);box-sizing:border-box}
+.co-when{font-family:var(--f-mono);font-size:var(--s-xs);letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);padding-top:6px;padding-right:20px}
+.co-tl li>div{display:grid;gap:8px;max-width:64ch}
+.co-tl p{color:var(--fg-2)}
+@media (max-width:700px){
+  .co-tl::before{left:4px}
+  .co-tl li{grid-template-columns:1fr;gap:6px;padding-left:28px}
+  .co-tl li::after{left:0;top:28px}
+  .co-when{padding:0}
+}
+
+/* steps inside a half-width column */
+.co-steps>li{grid-template-columns:40px minmax(0,1fr)}
+.co-steps>li p{grid-column:2}

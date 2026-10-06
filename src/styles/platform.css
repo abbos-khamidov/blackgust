@@ -1,0 +1,63 @@
+/* /platform — page-specific styles. Every class is prefixed pf- (platform) or og- (organization graph). */
+
+/* ---------- architecture data-flow diagram ---------- */
+.pf-w{padding:clamp(12px,2vw,24px)}
+.pf-w svg{min-width:860px}
+.pf-h{fill:var(--brass);font-family:var(--f-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+.pf-b{fill:var(--ink);stroke:var(--line-2);stroke-width:1}
+.pf-hl{stroke:rgba(201,168,106,.55)}
+.pf-router{stroke:var(--brass);stroke-dasharray:4 4;fill:rgba(201,168,106,.06)}
+.pf-pill{fill:var(--ink-3);stroke:var(--line-2)}
+.pf-t{fill:var(--bone);font-family:var(--f-body);font-size:13.5px}
+.pf-s{fill:var(--mute);font-family:var(--f-mono);font-size:11px;letter-spacing:.04em}
+.pf-l{stroke:var(--line-2);stroke-width:1;fill:none}
+.pf-mv{stroke:rgba(201,168,106,.55);stroke-dasharray:3 7;animation:pfflow 1.8s linear infinite}
+.pf-dash{stroke-dasharray:2 4}
+.pf-ring{fill:rgba(201,168,106,.035);stroke:var(--line-2);stroke-dasharray:2 5}
+.pf-e{stroke:var(--line-2);stroke-width:1}
+.pf-e2{stroke:rgba(201,168,106,.22)}
+.pf-core{fill:var(--ink);stroke:var(--brass)}
+.pf-ct{fill:var(--bone);font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase}
+.pf-n{fill:var(--bone)}
+.pf-nl{fill:var(--mute);font-family:var(--f-mono);font-size:11px;letter-spacing:.03em}
+.pf-dot{fill:var(--brass)}
+.pf-gov{fill:rgba(236,233,226,.02);stroke:var(--brass);stroke-opacity:.55;stroke-dasharray:6 5}
+.pf-gi{fill:#C9C7C0}
+@keyframes pfflow{to{stroke-dashoffset:-20}}
+@media (prefers-reduced-motion:reduce){.pf-mv{animation:none}}
+
+.pf-sub{display:grid;gap:8px;margin:clamp(40px,5vw,64px) 0 24px}
+.pf-cfg{font-family:var(--f-mono);font-size:.8rem;line-height:1.7;color:#C9C7C0}
+.pf-note{max-width:80ch}
+.pf-chips{display:flex;flex-wrap:wrap;gap:6px}
+.pf-use{margin-top:auto;padding-top:14px;border-top:1px dashed var(--rule);display:grid;gap:10px}
+.pf-use .ticks{font-size:.92rem;gap:6px}
+
+/* model router log */
+.pf-route{min-width:560px}
+.pf-rt{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.04em;padding:.15rem .45rem;border:1px solid var(--line-2);border-radius:2px;color:var(--bone)}
+.pf-rt.loc{border-color:rgba(127,176,138,.45);color:var(--ok)}
+
+/* honest-benchmarks note */
+.pf-honest{border-left:2px solid var(--brass);padding:4px 0 4px 18px;max-width:72ch;color:var(--bone);font-size:1rem}
+
+/* ---------- organization model (paper) ---------- */
+.og-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:start}
+@media (max-width:980px){.og-grid{grid-template-columns:1fr}}
+.og-w{overflow-x:auto;border:1px solid var(--paper-line);background:#EFECE5;padding:clamp(10px,2vw,20px)}
+.og-w svg{min-width:600px;width:100%;height:auto}
+.og-e{stroke:rgba(18,19,21,.28);stroke-width:1}
+.og-e.hl{stroke:var(--paper-ink);stroke-width:2}
+.og-el{fill:var(--paper-mute);font-family:var(--f-mono);font-size:10.5px;letter-spacing:.03em;paint-order:stroke;stroke:#EFECE5;stroke-width:5px;stroke-linejoin:round}
+.og-n rect{fill:var(--paper);stroke:rgba(18,19,21,.3);stroke-width:1}
+.og-n.hl rect{fill:#fff;stroke:var(--paper-ink);stroke-width:1.6}
+.og-h{fill:var(--paper-ink);font-family:var(--f-body);font-size:14px;font-weight:500}
+.og-s{fill:var(--paper-mute);font-family:var(--f-mono);font-size:10.5px;letter-spacing:.03em}
+.og-q{display:grid;gap:8px;padding:18px 20px;border:1px solid var(--paper-line);border-left:2px solid var(--paper-ink)}
+.og-q .mono{color:var(--paper-mute)}
+.og-q .serif{font-size:var(--s-lg);line-height:1.3}
+.og-q .dim{font-size:.93rem}
+.og-pts{margin:0;display:grid;border-top:1px solid var(--rule)}
+.og-pts>div{padding:16px 0;border-bottom:1px solid var(--rule);display:grid;gap:6px}
+.og-pts dt{font-weight:500}
+.og-pts dd{margin:0;color:var(--fg-2);font-size:.95rem}

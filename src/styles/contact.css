@@ -1,0 +1,28 @@
+/* /contact — page-specific styles (prefix: ct-) */
+
+/* time-zone chart */
+.ct-tzw{margin:0;border:1px solid var(--rule)}
+.ct-scroll{overflow-x:auto;padding:clamp(14px,2vw,26px)}
+.ct-tz{min-width:720px;width:100%;height:auto;font-family:var(--f-body)}
+.ct-tz text{fill:var(--fg);font-size:14px}
+.ct-axis text{fill:var(--fg-2);font-family:var(--f-mono);font-size:11px;letter-spacing:.06em}
+.ct-axis line{stroke:var(--rule);stroke-width:1}
+.ct-track{stroke:var(--rule);stroke-width:1}
+.ct-office{fill:var(--fg);fill-opacity:.06;stroke:var(--fg);stroke-opacity:.35;stroke-dasharray:4 4}
+.ct-biz{fill:var(--fg);fill-opacity:.22}
+.ct-ov{fill:var(--fg);fill-opacity:.85}
+.ct-hq text{font-weight:600}
+.ct-legend{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;padding:14px clamp(14px,2vw,26px);border-top:1px solid var(--rule);font-size:.86rem;color:var(--fg-2)}
+.ct-legend span{display:inline-flex;align-items:center;gap:8px}
+.ct-legend i{display:inline-block;width:22px;height:10px}
+.ct-k-office{border:1px dashed var(--fg);opacity:.6}
+.ct-k-biz{background:var(--fg);opacity:.22}
+.ct-k-ov{background:var(--fg);opacity:.85}
+.ct-legend .note{margin-left:auto}
+@media (max-width:700px){.ct-legend .note{margin-left:0}}
+
+/* topic routes */
+.ct-topics .ct-mail{display:grid;gap:4px;text-align:right;text-transform:none;letter-spacing:.02em}
+.ct-topics .ct-mail b{color:var(--fg);font-weight:500}
+.ct-topics .ct-mail:hover .u{color:var(--brass)}
+@media (max-width:760px){.ct-topics .ct-mail{text-align:left;white-space:normal}}
